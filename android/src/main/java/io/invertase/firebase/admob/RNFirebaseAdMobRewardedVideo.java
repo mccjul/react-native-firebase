@@ -1,6 +1,5 @@
 package io.invertase.firebase.admob;
 
-
 import android.app.Activity;
 
 import com.facebook.react.bridge.Arguments;
@@ -88,7 +87,7 @@ public class RNFirebaseAdMobRewardedVideo implements RewardedVideoAdListener {
       activity.runOnUiThread(new Runnable() {
         @Override
         public void run() {
-           rewardedVideo.setCustomData(customData);
+          // rewardedVideo.setCustomData(customData);
         }
       });
     }
@@ -138,7 +137,8 @@ public class RNFirebaseAdMobRewardedVideo implements RewardedVideoAdListener {
     sendEvent("onRewardedVideoStarted", null);
   }
 
-  // TODO onResume etc??? https://developers.google.com/admob/android/rewarded-video
+  // TODO onResume etc???
+  // https://developers.google.com/admob/android/rewarded-video
 
   /**
    * Send a native event over the bridge with a type and optional payload
